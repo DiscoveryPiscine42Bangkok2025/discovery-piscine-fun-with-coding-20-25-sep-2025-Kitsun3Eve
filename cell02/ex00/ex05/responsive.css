@@ -1,0 +1,53 @@
+/* Make the table cover the entire page */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+}
+
+table {
+    width: 100%;
+    height: 100vh;  /* Table takes up the full viewport height */
+    border-collapse: collapse;
+    table-layout: fixed; /* Ensures equal column width */
+}
+
+td {
+    border: 1px solid black;
+    padding: 20px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 1.5em;
+    box-sizing: border-box; /* Ensure padding doesn't overflow */
+}
+
+.first-cell {
+    background-color: #C0D69A; /* A shade of green */
+}
+
+.second-cell {
+    background-color: #F8C2A0; /* A shade of peach */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    td {
+        font-size: 1.2em;  /* Adjust font size on smaller screens */
+        padding: 15px; /* Reduce padding */
+    }
+}
+
+@media (max-width: 480px) {
+    td {
+        font-size: 1em; /* Further adjust font size for very small screens */
+        padding: 10px; /* Reduce padding even more */
+    }
+
+    table {
+        height: auto; /* Allow the table to resize when content is reduced */
+    }
+}

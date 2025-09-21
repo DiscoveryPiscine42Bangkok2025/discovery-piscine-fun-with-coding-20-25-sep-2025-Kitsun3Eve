@@ -1,0 +1,64 @@
+/* General body and layout styling */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+}
+
+/* Header styling */
+h1 {
+    font-size: 3em; /* Use em or rem for responsive font sizing */
+    margin-bottom: 20px;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    height: 100vh; /* Make the table cover the entire height */
+    border-collapse: collapse;
+    table-layout: fixed; /* Forces equal column width */
+}
+
+/* Table header and data cell styling */
+th, td {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+    word-wrap: break-word; /* Ensures content wraps in smaller columns */
+}
+
+/* Header cell styling */
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Table data cell styling */
+td {
+    background-color: #f2f2f2;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    table {
+        font-size: 0.8em; /* Reduce font size for smaller screens */
+    }
+
+    th, td {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    table {
+        font-size: 0.7em; /* Further reduce font size */
+    }
+
+    th, td {
+        padding: 5px;
+    }
+}

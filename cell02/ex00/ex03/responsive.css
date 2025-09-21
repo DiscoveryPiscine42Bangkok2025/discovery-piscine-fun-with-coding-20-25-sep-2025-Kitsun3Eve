@@ -1,0 +1,64 @@
+/* General body styling */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+/* Heading styling */
+h1 {
+    font-size: 3em; /* Responsive font size */
+    margin: 20px 0;
+}
+
+/* Image Container (like a "table") */
+.image-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Auto-fit grid with minimum width of 200px */
+    gap: 10px;
+    width: 100%;
+    padding: 10px;
+}
+
+/* Image styling */
+img {
+    max-width: 100%;   /* Image will resize according to the available width */
+    height: auto;      /* Maintain aspect ratio */
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+/* Links around images */
+a {
+    display: block;
+    width: 100%;
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5em; /* Slightly smaller heading */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2em; /* Further reduce heading size */
+    }
+
+    /* Stack images vertically on small screens */
+    .image-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* Remove image margin on small screens */
+    img {
+        margin: 0;
+    }
+}

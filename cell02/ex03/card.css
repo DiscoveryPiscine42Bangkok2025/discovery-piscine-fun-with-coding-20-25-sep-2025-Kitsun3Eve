@@ -1,0 +1,86 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.profile-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 250px;
+}
+
+/* Card Elements */
+.card-title h1 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.profile-picture img {
+    width: 100x;
+    height: 150px;
+    border-radius: 20%; /* Makes the image circular */
+    object-fit: cover;
+    margin-top: 20px;
+}
+
+/* The "invisible" table for alignment */
+.user-info {
+    width: 100%;
+    border-collapse: collapse; /* Removes the space between table cells */
+    margin-top: 15px;
+}
+
+.user-info td {
+    border: none; /* This is what makes the table "invisible" */
+    padding: 0;
+}
+
+.login {
+    font-size: 18px;
+    font-weight: bold;
+    color: #555;
+    margin: 5px 0;
+}
+
+.description {
+    font-size: 14px;
+    color: #888;
+    margin: 0;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.contact-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-top: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.contact-button:hover {
+    background-color: #0056b3;
+}

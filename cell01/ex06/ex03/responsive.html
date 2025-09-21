@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piscine Web</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            font-size: 3em; /* Responsive font size */
+            margin: 20px 0;
+        }
+
+        /* Image Container (like a "table") */
+        .image-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Auto-fit grid with minimum width of 200px */
+            gap: 10px;
+            width: 100%;
+            padding: 10px;
+        }
+
+        img {
+            max-width: 100%;   /* Image will resize according to the available width */
+            height: auto;      /* Maintain aspect ratio */
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+        }
+
+        /* Links around images */
+        a {
+            display: block;
+            width: 100%;
+        }
+
+        /* Media Queries for smaller screens */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em; /* Slightly smaller heading */
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2em; /* Further reduce heading size */
+            }
+
+            .image-container {
+                grid-template-columns: 1fr; /* Stack images vertically on small screens */
+            }
+
+            img {
+                margin: 0; /* Remove image margin on small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Piscine Web</h1>
+
+    <!-- Image Container for Responsive Layout -->
+    <div class="image-container">
+        <a href="https://www.youtube.com/watch?v=INscMGmhmX4">
+            <img src="https://static.wikia.nocookie.net/kamenriderfanfiction/images/0/00/Ren_Amamiya_%28Civilian%29.jpg/revision/latest?cb=20210117190530/400x200" alt="Image 1">
+        </a>
+        <img src="https://static.wikia.nocookie.net/megamitensei/images/b/bd/P5A_Goro_Akechi.png/revision/latest?cb=20180421175225" alt="Image 2">
+    </div>
+
+</body>
+</html>

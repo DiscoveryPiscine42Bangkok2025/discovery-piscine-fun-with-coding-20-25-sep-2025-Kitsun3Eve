@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piscine Web</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3em; /* Responsive font size */
+            margin-bottom: 20px;
+        }
+
+        img {
+            max-width: 100%; /* Ensures the image scales down with the screen width */
+            height: auto;    /* Maintains the aspect ratio */
+            margin: 10px;
+            border: 1px solid #ddd;
+            box-sizing: border-box; /* Ensures the border is included in the image's width */
+        }
+
+        /* For smaller screens, adjust the layout */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em; /* Slightly smaller font size */
+            }
+
+            img {
+                margin: 5px; /* Reduce margin on smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2em; /* Further reduce font size */
+            }
+
+            img {
+                margin: 5px; /* Maintain consistent margin */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Piscine Web</h1>
+
+    <img src="https://static.wikia.nocookie.net/kamenriderfanfiction/images/0/00/Ren_Amamiya_%28Civilian%29.jpg/revision/latest?cb=20210117190530/400x200" alt="Image 1">
+    <img src="https://static.wikia.nocookie.net/megamitensei/images/b/bd/P5A_Goro_Akechi.png/revision/latest?cb=20180421175225" alt="Image 2">
+
+</body>
+</html>

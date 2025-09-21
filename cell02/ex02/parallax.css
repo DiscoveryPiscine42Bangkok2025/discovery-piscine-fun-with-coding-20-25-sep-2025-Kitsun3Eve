@@ -1,0 +1,47 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.parallax-container {
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; /* This is the key for the parallax effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.parallax-image-1 {
+    background-image: url('https://www.anitrendz.com/_next/image?url=https%3A%2F%2Fi0.wp.com%2Fanitrendz.net%2Fnews%2Fwp-content%2Fuploads%2F2025%2F05%2FGsQPiwCaMAY2eA3-scaled-e1748755343896.jpg%3Ffit%3D1920%252C1079%26ssl%3D1&w=1920&q=75');
+}
+
+.parallax-image-2 {
+    background-image: url('https://kprofiles.com/wp-content/uploads/2024/11/aiscream-900x675.webp');
+}
+
+.message {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.message h1, .message h2 {
+    margin: 0;
+}
+
+.content-block {
+    height: 50vh;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}

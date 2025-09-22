@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Balloon</title>
+    <style>
+        /* โค้ด CSS ที่ใช้จัดแต่งรูปลักษณ์ของบอลลูน */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #balloon {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="balloon"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        /* โค้ด JavaScript ที่ใช้ควบคุมการทำงานของบอลลูน (เขียนด้วย jQuery) */
+        $(document).ready(function() {
+            const balloon = $('#balloon');
+            let balloonSize = 200;
+            const maxSize = 420;
+            const colors = ['red', 'green', 'blue'];
+            let colorIndex = 0;
+
+            function updateBalloon() {
+                balloon.css({
+                    'width': `${balloonSize}px`,
+                    'height': `${balloonSize}px`,
+                    'background-color': colors[colorIndex]
+                });
+            }
+
+            // เมื่อคลิกที่บอลลูน
+            balloon.on('click', function() {
+                balloonSize += 10;
+                
+                if (balloonSize > maxSize) {
+                    balloonSize = 200;
+                    colorIndex = 0;
+                } else {
+                    colorIndex = (colorIndex + 1) % colors.length;
+                }
+                
+                updateBalloon();
+            });
+
+            // เมื่อเมาส์วางทับบอลลูน
+            balloon.on('mouseover', function() {
+                if (balloonSize > 200) {
+                    balloonSize -= 5;
+                }
+                updateBalloon();
+            });
+
+            // เมื่อเมาส์ออกจากบอลลูน
+            balloon.on('mouseout', function() {
+                if (balloonSize > 200) {
+                    balloonSize -= 5;
+                }
+                
+                colorIndex = (colorIndex - 1 + colors.length) % colors.length;
+                
+                updateBalloon();
+            });
+        });
+    </script>
+</body>
+</html>

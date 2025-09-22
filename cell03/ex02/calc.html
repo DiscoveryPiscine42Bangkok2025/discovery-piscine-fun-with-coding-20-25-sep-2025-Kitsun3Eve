@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator</title>
+    <style>
+        /* CSS starts here */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .calculator-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        input, select, button {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 200px;
+            text-align: center;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+        /* CSS ends here */
+    </style>
+</head>
+<body>
+
+    <div class="calculator-container">
+        <h1>Basic Calculator</h1>
+        <input type="text" id="num1" placeholder="Enter first number">
+        <select id="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+        </select>
+        <input type="text" id="num2" placeholder="Enter second number">
+        <button id="calculate-btn">Try me!</button>
+    </div>
+
+    <script>
+        /* JavaScript starts here */
+        const num1Input = document.getElementById('num1');
+        const num2Input = document.getElementById('num2');
+        const operatorSelect = document.getElementById('operator');
+        const calculateBtn = document.getElementById('calculate-btn');
+
+        // ฟังก์ชันสำหรับจัดการการคำนวณ
+        function calculate() {
+            const num1 = parseInt(num1Input.value);
+            const num2 = parseInt(num2Input.value);
+            const operator = operatorSelect.value;
+            let result;
+
+            // เงื่อนไขที่ 1: ตรวจสอบว่าเป็นจำนวนเต็มบวกหรือไม่
+            if (isNaN(num1) || isNaN(num2) || num1 < 0 || num2 < 0) {
+                alert("Error :(");
+                console.log("Error :(");
+                return;
+            }
+
+            // เงื่อนไขที่ 2: ตรวจสอบการหารหรือโมดูโลด้วยศูนย์
+            if ((operator === '/' || operator === '%') && num2 === 0) {
+                alert("It's over 9000!");
+                console.log("It's over 9000!");
+                return;
+            }
+
+            // Perform the calculation
+            switch (operator) {
+                case '+':
+                    result = num1 + num2;
+                    break;
+                case '-':
+                    result = num1 - num2;
+                    break;
+                case '*':
+                    result = num1 * num2;
+                    break;
+                case '/':
+                    result = num1 / num2;
+                    break;
+                case '%':
+                    result = num1 % num2;
+                    break;
+            }
+
+            // Display the result
+            alert(result);
+            console.log(result);
+        }
+
+        // Add event listener to the button
+        calculateBtn.addEventListener('click', calculate);
+
+        // Condition 3: Show a pop-up every 30 seconds
+        setInterval(() => {
+            alert("Please, use me...");
+        }, 30000);
+        /* JavaScript ends here */
+    </script>
+</body>
+</html>

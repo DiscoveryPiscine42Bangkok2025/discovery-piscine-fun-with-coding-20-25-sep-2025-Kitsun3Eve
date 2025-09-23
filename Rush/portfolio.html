@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Persona 5 Royal Profile Selector</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+
+    <div id="profile-select-screen" class="p5-container netflix-style">
+        <div class="container h-100 d-flex flex-column justify-content-center align-items-center">
+            <h1 class="p5-title-style mb-5">SELECT ONE</h1>
+            <div class="d-flex justify-content-center">
+                <div class="profile-box mx-4 text-center" data-profile="mild">
+                    <img src="https://scontent.fbkk2-8.fna.fbcdn.net/v/t1.15752-9/550359180_4274442122842592_2350817631979939233_n.jpg?stp=dst-jpg_s2048x2048_tt6&_nc_cat=100&ccb=1-7&_nc_sid=9f807c&_nc_ohc=9TcvVWldvGAQ7kNvwG_f00O&_nc_oc=AdnYeg8cW2o0yk6h9rpPwItxAhRIpg5z3JUvrqJMkLNPfvJ5ZWdIJvtL0EfxzViyKlc&_nc_zt=23&_nc_ht=scontent.fbkk2-8.fna&oh=03_Q7cD3QG4Stz1D6gFlj65ZA9BtzTw1xhTAvLykQROvzfePAPlZg&oe=68F8F3BD" class="profile-avatar mild-color" alt="Mild Profile"> 
+                    <p class="profile-name">WITTCHAYA</p>
+                </div>
+                <div class="profile-box mx-4 text-center" data-profile="cake">
+                    <img src="https://scontent.fbkk2-7.fna.fbcdn.net/v/t1.15752-9/551795374_1543417093682746_5213328528886952241_n.png?_nc_cat=108&ccb=1-7&_nc_sid=9f807c&_nc_ohc=ZFD1U5ohH5EQ7kNvwFZ5522&_nc_oc=AdnasXcUEH6v-qm5VOMhhsP3wkkCEczTXKfdAxwqT_XsUWcfBalcLXAj76ZXTRmpcM4&_nc_zt=23&_nc_ht=scontent.fbkk2-7.fna&oh=03_Q7cD3QGkAXXrhJtdUxoufLqaR_Xy24R28zrkd66Hc6jstEXeOQ&oe=68F9D95A" class="profile-avatar cake-color" alt="Cake Profile"> 
+                    <p class="profile-name">RUNGRUDEE</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="portfolio-screen" class="p5-container hidden-screen portfolio-style">
+        <div id="parallax-bg" class="parallax-bg"></div>
+        <header id="navbar-portfolio">
+            <nav class="container">
+                <a href="#about" class="nav-link">ABOUT</a>
+                <a href="#showcase" class="nav-link">SKILLS</a>
+                <a href="#contact" class="nav-link">CONTACT</a>
+                <a href="#" id="return-to-profiles" class="nav-link">RETURN TO PROFILES</a>
+            </nav>
+        </header>
+
+        <main class="container portfolio-content-wrapper" id="mild-portfolio">
+            <section id="about" class="portfolio-section">
+                <h2 class="section-title">ABOUT <span class="char-name-display">WITTCHAYA</span></h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="https://scontent.fbkk2-7.fna.fbcdn.net/v/t1.15752-9/548193281_2065552613981375_5097114848814166716_n.jpg?stp=dst-jpg_s2048x2048_tt6&_nc_cat=101&ccb=1-7&_nc_sid=9f807c&_nc_ohc=3IllN-_IwW8Q7kNvwGxIuvg&_nc_oc=Adn6rfxKrTK7Zl7Qh9NDrwPHAeOua1IyY2asnf7h5utwoVHKMWOTsimILXMVUVK2s28&_nc_zt=23&_nc_ht=scontent.fbkk2-7.fna&oh=03_Q7cD3QHJzlTi69rpoSDJnpltd9serBwYPJQeKA-IKPHO-CeIoQ&oe=68F8D1F0" class="img-fluid my-photo" alt="Photo of Mild">
+                    </div>
+                    <div class="col-md-8">
+                        <p><strong>Name:</strong> Wittchaya Srikaew (Mild)</p>
+                        <p><strong>Background:</strong> A first-year student in Business Economics and Management from King Mongkut's Institue of Technology Ladkrabang.</p>
+                        <p><strong>Interests:</strong> Video games, manga and sleep.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="showcase" class="portfolio-section">
+                <h2 class="section-title">Skills & QUALIFICATIONS</h2>
+                <ul class="qualification-list">
+                    <li>**Competition:** Honorable Mention Award in the IT KMITL Game Jam 2022 competition.</li>
+                    <li>**Responsibility:** Consistently following through on promises, showing up on time, and doing what you said you would do.</li>
+                </ul>
+            </section>
+            
+            <section id="contact" class="portfolio-section">
+                <h2 class="section-title">CONTACT & SOCIALS</h2>
+                <p>Links to social networks:</p>
+                <div class="social-links">
+                    <a href="https://github.com/Kitsun3Eve" target="_blank">GitHub/Kitsune3Eve</a> | 
+                    <a href="https://www.instagram.com/myyymiles_/" target="_blank">IG/myyymiles_</a> | 
+                </div>
+            </section>
+        </main>
+        
+        <main class="container portfolio-content-wrapper hidden-content" id="cake-portfolio">
+            <section id="about" class="portfolio-section">
+                <h2 class="section-title">ABOUT <span class="char-name-display">RUNGRUDEE</span></h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="https://scontent.fbkk2-7.fna.fbcdn.net/v/t1.15752-9/551795374_1543417093682746_5213328528886952241_n.png?_nc_cat=108&ccb=1-7&_nc_sid=9f807c&_nc_ohc=ZFD1U5ohH5EQ7kNvwFZ5522&_nc_oc=AdnasXcUEH6v-qm5VOMhhsP3wkkCEczTXKfdAxwqT_XsUWcfBalcLXAj76ZXTRmpcM4&_nc_zt=23&_nc_ht=scontent.fbkk2-7.fna&oh=03_Q7cD3QGkAXXrhJtdUxoufLqaR_Xy24R28zrkd66Hc6jstEXeOQ&oe=68F9D95A" class="img-fluid my-photo" alt="Photo of Cake">
+                    </div>
+                    <div class="col-md-8">
+                        <p><strong>Name:</strong> Rungrudee Noonsong(Pancake)</p>
+                        <p><strong>Background:</strong> A first-year student in Business Economics and Management from King Mongkut's Institue of Technology Ladkrabang. </p>
+                        <p><strong>Interests:</strong> listening to music and watching series</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="showcase" class="portfolio-section">
+                <h2 class="section-title">SKILLS & QUALIFICATIONS</h2>
+                <ul class="qualification-list">
+                    <li>**Painting:** Painting competition in school.</li>
+                    <li>**English Quiz Bee:**Answer about general questions in school. </li>
+                </ul>
+            </section>
+            
+            <section id="contact" class="portfolio-section">
+                <h2 class="section-title">CONTACT & SOCIALS</h2>
+                <p>Links to social networks:</p>
+                <div class="social-links">
+                    <a href="https://github.com/rnoonson" target="_blank">GitHub/rnoonson</a>
+                    <a href="https://www.instagram.com/really_pannn/" target="_blank">Instragram/really_pannn</a> | 
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="portfolio.js"></script>
+
+</body>
+</html>

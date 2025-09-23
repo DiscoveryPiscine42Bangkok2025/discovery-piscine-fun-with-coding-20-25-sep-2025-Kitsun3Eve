@@ -1,0 +1,190 @@
+/* --- Global Styles and Variables --- */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700;900&family=Montserrat:wght@400;700&display=swap'); 
+
+:root {
+    --p5-red: #cc0000; /* สีแดงหลัก */
+    --p5-blue: #00cccc; /* สีน้ำเงิน/ฟ้าหลัก */
+    --p5-font: 'Roboto Condensed', sans-serif;
+    --main-font: 'Montserrat', sans-serif; /* ฟอนต์สำหรับ Portfolio */
+}
+
+body {
+    background-color: #000;
+    overflow: hidden; 
+    color: #fff;
+    font-family: var(--p5-font);
+}
+
+.p5-container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    transition: opacity 0.5s;
+    display: flex; 
+}
+
+/* ซ่อนหน้าจอเริ่มต้น (จะถูกจัดการด้วย JS) */
+.hidden-screen {
+    display: none !important; 
+    opacity: 0;
+}
+/* --- PROFILE SELECT SCREEN & LOAD GAME Styles --- */
+
+.netflix-style {
+    background-color: #141414; 
+    flex-direction: column;
+}
+
+.p5-title-style {
+    font-family: var(--p5-font);
+    font-weight: 900;
+    font-size: 3.5rem;
+    color: #fff;
+}
+
+.profile-box {
+    cursor: pointer;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.profile-avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+    object-fit: cover;
+    border: 5px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.mild-color { background-color: #333; }
+.cake-color { background-color: #333; }
+
+.profile-name {
+    font-family: var(--p5-font);
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #888;
+    margin-top: 10px;
+}
+
+.profile-box:hover .profile-avatar {
+    border-color: var(--p5-red);
+    transform: scale(1.05);
+}
+
+.profile-box:hover .profile-name {
+    color: #fff;
+}
+
+/* --- PORTFOLIO SCREEN Styles --- */
+.portfolio-style {
+    background-color: #f8f9fa; 
+    color: #343a40; 
+    overflow-y: auto;
+    display: block; /* สำคัญ: ต้องเป็น block เพื่อให้ Scroll ได้ */
+    font-family: var(--main-font);
+}
+
+#navbar-portfolio {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--p5-red);
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+#navbar-portfolio .container {
+    display: flex;
+    justify-content: center;
+}
+
+#navbar-portfolio .nav-link {
+    color: #fff;
+    font-family: var(--p5-font);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0 20px;
+    text-decoration: none;
+    padding-bottom: 5px;
+    border-bottom: 3px solid transparent;
+    transition: border-bottom-color 0.2s;
+}
+
+#navbar-portfolio .nav-link:hover {
+    border-bottom-color: var(--p5-blue);
+}
+
+.portfolio-content-wrapper {
+    padding-top: 80px; 
+    max-width: 900px;
+}
+
+.portfolio-section {
+    padding: 40px 0;
+    border-bottom: 2px dashed #ccc;
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-family: var(--p5-font);
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--p5-red);
+    margin-bottom: 30px;
+    border-left: 10px solid var(--p5-blue);
+    padding-left: 15px;
+}
+
+.my-photo {
+     width: 100%;
+    max-width: 250px; 
+    height: 250px; 
+    object-fit: cover;
+    border-radius: 50%; 
+    border: 5px solid var(--p5-red);
+    margin-bottom: 20px;
+    float: left;
+    margin-left: 20px; 
+}
+
+.qualification-list li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.social-links a {
+    color: var(--p5-blue);
+    font-weight: 700;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+.social-links a:hover {
+    color: var(--p5-red);
+    text-decoration: underline;
+}
+
+.hidden-content {
+    display: none;
+}
+
+.return-portfolio-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    transform: skewX(-10deg);
+}
+
+/* Responsive adjustment for small screens */
+@media (max-width: 768px) {
+    .p5-logo { font-size: 10vw; right: 5%; }
+    .p5-royal-text { font-size: 2vw; }
+    
+    .profile-avatar { width: 100px; height: 100px; }
+    
+    .portfolio-content-wrapper { padding-top: 60px; }
+    .my-photo { max-width: 150px; }
+}
